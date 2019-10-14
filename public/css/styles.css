@@ -1,0 +1,22 @@
+body {
+  max-width: 900px;
+  font-family: sans-serif;
+}
+
+p {
+  line-height: 140%; }
+
+ul.answers {
+  list-style: none;
+  padding: 0;
+  max-width: 700px;
+}
+ul.answers li {
+  margin-bottom: 5px;
+}
+
+footer {
+  margin-top: 40px;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+}
