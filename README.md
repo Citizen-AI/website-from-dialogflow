@@ -2,6 +2,7 @@
 
 ## Instructions
 
+* Install dependencies with `npm install`
 * Start the webserver with `npm start`
 
 

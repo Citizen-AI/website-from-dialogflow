@@ -26,4 +26,4 @@ app.get('/:topic', (req, res) => res.render('topic', {
 }))
 
 
-const listener = app.listen(port || 3000, () => console.log(`Example app listening at http://localhost:${listener.address().port}!`))
+const listener = app.listen(port || 3000, () => console.log(`Website live at http://localhost:${listener.address().port}!`))
