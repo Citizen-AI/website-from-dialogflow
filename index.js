@@ -1,4 +1,4 @@
-require('dotenv').config()
+require('./env')
 const express = require('express'),
       exphbs = require('express-handlebars'),
       path = require('path'),
@@ -7,7 +7,7 @@ const express = require('express'),
 const { get_topics } = require('./dialogflow')
 
 
-const { port } = process.env
+const { port } = process.env || 3000
 const app = express()
 app.set('views', __dirname + '/views')
 app.engine('handlebars', exphbs())
@@ -26,4 +26,4 @@ app.get('/:topic', (req, res) => res.render('topic', {
 }))
 
 
-app.listen(port || 3000, () => console.log(`Example app listening on port ${port}!`))
+const listener = app.listen(port || 3000, () => console.log(`Example app listening at http://localhost:${listener.address().port}!`))

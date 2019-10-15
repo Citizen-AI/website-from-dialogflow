@@ -6,9 +6,10 @@ const fs = require('fs'),
 const { agent_client_uri } = process.env
 const folder = './data'
 
+let intents = []
 try {
   const latest_file_name = _.max(fs.readdirSync(folder))
-  const intents = JSON.parse(fs.readFileSync(folder + '/' + latest_file_name))
+  intents = JSON.parse(fs.readFileSync(folder + '/' + latest_file_name))
 } catch (e) {
   throw new Error('No intents file found. Run *npm run download-intents*')
 }
