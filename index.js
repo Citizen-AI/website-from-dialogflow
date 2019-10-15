@@ -7,8 +7,8 @@ const express = require('express'),
 const { get_topics } = require('./dialogflow')
 
 
+const { port } = process.env
 const app = express()
-const port = 3000
 app.set('views', __dirname + '/views')
 app.engine('handlebars', exphbs())
 app.set('view engine', 'handlebars')
@@ -26,4 +26,4 @@ app.get('/:topic', (req, res) => res.render('topic', {
 }))
 
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.listen(port || 3000, () => console.log(`Example app listening on port ${port}!`))
