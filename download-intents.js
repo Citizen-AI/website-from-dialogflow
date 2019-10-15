@@ -10,7 +10,7 @@ const { google_creds, agent_client_uri } = process.env,
       intentsClient = new dialogflow.IntentsClient(config),
       projectAgentPath = intentsClient.projectAgentPath(project_id)
 
-
+      
 const download_intents = async () => {
   console.log(`Getting intents from Dialogflow project ${project_id}`)
   const [response] = await intentsClient.listIntents({ 
@@ -22,3 +22,6 @@ const download_intents = async () => {
   console.log('Writing to file:', path)
   fs.writeFileSync(path, JSON.stringify(response))
 }
+
+
+download_intents()
