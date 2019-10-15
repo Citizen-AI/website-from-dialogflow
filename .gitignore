@@ -37,3 +37,4 @@ coffeelint.json
 gcp-api-key.json
 bundle.js
 .vscode
+data/
