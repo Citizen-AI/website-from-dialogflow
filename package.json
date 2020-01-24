@@ -6,13 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "download-intents": "node download-intents.js"
+    "download-intents": "node dialogflow/download-intents.js",
+    "create-links": "node dialogflow/create-intents.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "dialogflow": "^0.12.0",
-    "dotenv": "^8.1.0",
+    "bottleneck": "^2.19.5",
+    "dialogflow": "^0.12.2",
+    "dotenv": "^8.2.0",
     "envalid": "^5.0.0",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",

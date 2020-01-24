@@ -4,10 +4,12 @@
 
 * Install dependencies with `npm install`
 * Start the webserver with `npm start`
-
+* Load the latest version of the agent with `npm run download-intents`
 
 ## Todo
 
+* Use MongoDB instead of file?
+* Make FU links display
 * Q&A schema: https://schema.org/docs/faq.html
-* FU & QR links
+* QR links
 * Source links
