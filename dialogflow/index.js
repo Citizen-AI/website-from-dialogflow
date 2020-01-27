@@ -26,12 +26,13 @@ const get_topics = () => {
 
   return sorted_intents.map(i => {
     const question = tp_text(last(i.trainingPhrases))
-
+    const answer = message_text(i).map(a => a.replace(/\n/g, '\\n'))
+ 
     return {
       name: i.name,
       question: question,
       link: linkify(question),
-      answer: message_text(i),
+      answer: answer,
       df_link: df_link(i.name)
     }
   })
