@@ -6,7 +6,7 @@ const fastify = require('fastify')({ logger: true })
 
 fastify.register(require('point-of-view'), { 
   engine: { handlebars: require('handlebars') },
-  layout: './views/layouts/main.handlebars'
+  // layout: './views/layouts/main.handlebars'
 })
 fastify.register(require('fastify-static'), { root: path.join(__dirname, 'public') })
 
@@ -24,6 +24,9 @@ fastify
     reply.view('/views/topic.handlebars', { 
       topic: _.find(topics, { link: req.params.topic } ) 
     })
+  })
+  .get('/json', (req, reply) => {
+    reply.view('/views/json-ld.handlebars', { topics })
   })
 
 

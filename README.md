@@ -14,3 +14,4 @@
 * Q&A schema: https://schema.org/docs/faq.html
 * QR links
 * Source links
+* /topics should only be sent data necessary for that, not the whole lot
