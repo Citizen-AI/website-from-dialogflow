@@ -1,10 +1,10 @@
 body {
   max-width: 900px;
-  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 p {
-  line-height: 140%; }
+  line-height: 160%; }
 
 ul.answers {
   list-style: none;
