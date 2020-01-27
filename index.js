@@ -12,7 +12,7 @@ fastify.register(require('fastify-static'), { root: path.join(__dirname, 'public
 
 const { get_topics } = require('./dialogflow')
 
-
+const { PORT } = process.env
 const topics = get_topics()
 
 
@@ -30,6 +30,6 @@ fastify
   })
 
 
-fastify.listen(3000)
+fastify.listen(PORT || 3000)
   .then(addr => console.log(`Website live at ${addr}`))
 
