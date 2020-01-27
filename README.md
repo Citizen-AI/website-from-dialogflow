@@ -8,6 +8,7 @@
 
 ## Todo
 
+* Use JSON-LD
 * Use MongoDB instead of file?
 * Make FU links display
 * Q&A schema: https://schema.org/docs/faq.html
