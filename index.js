@@ -26,6 +26,7 @@ fastify
     })
   })
   .get('/json', (req, reply) => {
+    topics[topics.length - 1].last = true
     reply.view('/views/json-ld.handlebars', { topics })
   })
 
