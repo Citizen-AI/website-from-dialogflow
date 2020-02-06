@@ -4,8 +4,9 @@
 
 * Install dependencies with `npm install`
 * Load the latest version of the agent with `npm run download-intents`
-* Start the webserver with `npm start`
-* Visit `http://127.0.0.1:3000/json` to output a [JSON-LD FAQ-style](https://developers.google.com/search/docs/data-types/faqpage) file `data/json_ld.js`
+* Output a [JSON-LD FAQ-style](https://developers.google.com/search/docs/data-types/faqpage) file with `npm run make_json_ld`
+* Or, start the webserver with `npm start`
+
 
 ## Todo
 
