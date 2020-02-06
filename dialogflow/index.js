@@ -17,25 +17,36 @@ const get_topics = () => {
   const last = array => [...array].pop()
 
   const linkify = title => title.replace(/ /g, '-').replace('?', '').toLowerCase()
-  const df_link = name => agent_client_uri + 'editIntent' + name.replace(/projects.*intents/, '') + '/'
+  const make_df_link = name => agent_client_uri + 'editIntent' + name.replace(/projects.*intents/, '') + '/'
 
   const sorted_intents = intents.filter(i => 
     !i.displayName.match(/^\[CA|Meta|App|Small talk\]|Default Fallback Intent/i)
     && i.trainingPhrases.length > 0
     && i.messages.length > 0)
 
-  return sorted_intents.map(i => {
+  const sorted_intents_with_q_and_a = sorted_intents.map(i => {
     const question = tp_text(last(i.trainingPhrases))
-    const answer = message_text(i).map(a => a.replace(/\n/g, '\\n'))
- 
+    const link = linkify(question)
+    const name = i.name
+    const df_link = make_df_link(name)
+    let answer = null
+    try {
+      answer = message_text(i).map(a => a.replace(/\n/g, '\\n'))  
+    } catch (error) {
+      console.error(`Can't find answer in '${question}' / ${df_link}`)
+    }
+
     return {
-      name: i.name,
-      question: question,
-      link: linkify(question),
-      answer: answer,
-      df_link: df_link(i.name)
+      name,
+      question,
+      link,
+      answer,
+      df_link
     }
   })
+
+  const intents_with_answers = sorted_intents_with_q_and_a.filter(i => i.answer && i.answer.length > 0)
+  return intents_with_answers
 }
 
 

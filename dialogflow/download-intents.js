@@ -5,7 +5,7 @@ const dialogflow = require('dialogflow'),
       fs = require('fs')
 
 
-const { google_creds, agent_client_uri } = process.env,
+const { google_creds } = process.env,
       credentials = JSON.parse(google_creds),
       { project_id } = credentials,
       config = { credentials: credentials },
@@ -21,8 +21,8 @@ intentsClient.listIntents({
   parent: projectAgentPath,
   intentView: 'INTENT_VIEW_FULL'
 }).then(([response]) => {
-  const now = new Date().toISOString(),
-  path = `${folder}/intents-${project_id}-${now}.json`
+  const now = new Date().toISOString()
+  const path = `${folder}/intents-${project_id}-${now}.json`
   console.log('Writing to file:', path)
   fs.writeFileSync(path, JSON.stringify(response, null, 2))
 })
