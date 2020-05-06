@@ -32,7 +32,7 @@ node_modules
 
 *.DS_Store
 
-.env
+.env*
 coffeelint.json
 gcp-api-key.json
 bundle.js
