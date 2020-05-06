@@ -17,3 +17,8 @@
 * QR links
 * Source links
 * /topics should only be sent data necessary for that, not the whole lot
+
+
+## Thanks to 
+
+* [Alex](https://stackoverflow.com/a/4253415/1876628) for escaping newlines in proper JSON
