@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
     "download-intents": "node dialogflow/download-intents.js",
+    "intents-to-squidex": "node --harmony make_squidex.js",
     "create-links": "node dialogflow/create-intents.js",
     "make-json-ld": "node make_json_ld.js"
   },

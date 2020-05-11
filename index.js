@@ -20,8 +20,8 @@ fastify
     reply.view('/views/home.handlebars', { topics })
   })
   .get('/:topic', (req, reply) => {
-    reply.view('/views/topic.handlebars', { 
-      topic: _.find(topics, { link: req.params.topic } ) 
+    reply.view('/views/topic.handlebars', {
+      topic: _.find(topics, { link: req.params.topic } )
     })
   })
   .get('/json', (req, reply) => {

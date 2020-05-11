@@ -13,11 +13,10 @@ const { google_creds } = process.env,
       projectAgentPath = intentsClient.projectAgentPath(project_id),
       folder = './data'
 
-      
 if(!fs.existsSync(folder)) fs.mkdirSync(folder)
 
 console.log(`Getting intents from Dialogflow project ${project_id}`)
-intentsClient.listIntents({ 
+intentsClient.listIntents({
   parent: projectAgentPath,
   intentView: 'INTENT_VIEW_FULL'
 }).then(([response]) => {

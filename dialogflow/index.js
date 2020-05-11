@@ -27,7 +27,8 @@ const get_topics = () => {
   const sorted_intents_with_q_and_a = sorted_intents.map(i => {
     const question = tp_text(last(i.trainingPhrases))
     const link = linkify(question)
-    const name = i.name
+    const { name, displayName } = i
+    const intent_key = i.name.match(/.*\/(.*)$/)[1]
     const df_link = make_df_link(name)
     let answer = null
     try {
@@ -38,6 +39,8 @@ const get_topics = () => {
 
     return {
       name,
+      displayName,
+      intent_key,
       question,
       link,
       answer,

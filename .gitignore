@@ -38,3 +38,4 @@ gcp-api-key.json
 bundle.js
 .vscode
 data/
+.configuration

@@ -5,6 +5,7 @@
 * Install dependencies with `npm install`
 * Load the latest version of the agent with `npm run download-intents`
 * Output a [JSON-LD FAQ-style](https://developers.google.com/search/docs/data-types/faqpage) file with `npm run make_json_ld`
+* Output a [Squidex-style](https://squidex.io/) JSON file with `npm run intents-to-squidex`
 * Or, start the webserver with `npm start`
 
 
@@ -19,6 +20,6 @@
 * /topics should only be sent data necessary for that, not the whole lot
 
 
-## Thanks to 
+## Thanks to
 
 * [Alex](https://stackoverflow.com/a/4253415/1876628) for escaping newlines in proper JSON
