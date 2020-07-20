@@ -31,6 +31,3 @@ console.log('Wrote to', file_name)
 
 
 
-
-
-// sq content import topics ../website-from-dialogflow/data/topics.json --fields name,intentKey,answer,source,exampleQuestions --format JSON
