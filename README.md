@@ -4,10 +4,16 @@
 
 * Install dependencies with `npm install`
 * Load the latest version of the agent with `npm run download-intents`
+* Start the webserver with `npm start`
+
+
+## Utilities
+
+This has grown into a Dialogflow / Headless CMS utility belt. Whoops?
+
 * Output a [JSON-LD FAQ-style](https://developers.google.com/search/docs/data-types/faqpage) file with `npm run make_json_ld`
 * Output a [Squidex-style](https://squidex.io/) JSON file with `npm run intents-to-squidex`
-* Or, start the webserver with `npm start`
-
+* Convert a [Kontent-ai style](https://kontent.ai) JSON file to Squidex style with `npm run kontent-to-squidex`
 
 ## Todo
 

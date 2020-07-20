@@ -19,7 +19,7 @@ const get_topics = () => {
   const linkify = title => title.replace(/ /g, '-').replace('?', '').toLowerCase()
   const make_df_link = name => agent_client_uri + 'editIntent' + name.replace(/projects.*intents/, '') + '/'
 
-  const sorted_intents = intents.filter(i => 
+  const sorted_intents = intents.filter(i =>
     !i.displayName.match(/^\[CA|Meta|App|Small talk\]|Default Fallback Intent/i)
     && i.trainingPhrases.length > 0
     && i.messages.length > 0)
