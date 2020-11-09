@@ -15,14 +15,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bottleneck": "^2.19.5",
-    "dialogflow": "^0.12.2",
-    "dotenv": "^8.2.0",
-    "envalid": "^5.0.0",
-    "fastify": "^2.15.2",
-    "fastify-static": "^2.7.0",
-    "handlebars": "^4.7.6",
-    "lodash": "^4.17.19",
-    "point-of-view": "^3.8.0"
+    "bottleneck": "*",
+    "dialogflow": "^4.0.3",
+    "dotenv": "*",
+    "envalid": "^6.0.2",
+    "fastify": "^3.8.0",
+    "fastify-static": "^3.3.0",
+    "handlebars": "*",
+    "lodash": "*",
+    "point-of-view": "^4.6.0"
   }
 }
