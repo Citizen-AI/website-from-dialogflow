@@ -20,7 +20,7 @@
     "dotenv": "*",
     "envalid": "^6.0.2",
     "fastify": "^3.29.4",
-    "fastify-static": "^3.3.0",
+    "fastify-static": "^4.4.1",
     "handlebars": "*",
     "lodash": "*",
     "point-of-view": "^4.6.0"
